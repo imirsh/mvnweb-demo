@@ -6,14 +6,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: mvnweb-demo
+      app: mvnweb-demo-<BUILD_TAG>
   template:
     metadata:
       labels:
-        app: mvnweb-demo
+        app: mvnweb-demo-<BUILD_TAG>
     spec:
       containers:
-      - name: mvnweb-demo
+      - name: mvnweb-demo-<BUILD_TAG>
         image: registry.cn-beijing.aliyuncs.com/dengyou/mvnweb-demo:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
 
