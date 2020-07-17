@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mvnweb-demo
-  namespace: default
+  namespace: dev
 spec:
   selector:
     matchLabels:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: mvnweb-demo
-        image: registry.cn-beijing.aliyuncs.com/dengyou/mvnweb-demo:<BUILD_TAG>
+        image: registry.cn-beijing.aliyuncs.com/dengyou/mvnweb-demo:<BUILD_TAG>-dev
         imagePullPolicy: IfNotPresent
 
