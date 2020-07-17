@@ -15,7 +15,8 @@ podTemplate(cloud: 'kubernetes',containers: [
         stage('Clone'){
             container('tools') {
                 echo "1. Clone Stage"
-                git url: "https://github.com/imirsh/mvnweb-demo.git"
+		checkout scm
+		// git url: "https://github.com/imirsh/mvnweb-demo.git"
                 script {
                     build_tag = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
                 }
